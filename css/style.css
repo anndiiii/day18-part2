@@ -1,0 +1,137 @@
+/*.loader{
+    margin: 100px;
+}
+.loader img{
+    display: inline-block;
+    width: 0px;
+    height: 0px;
+    border-radius:  50%; 
+    margin-right: 8px;
+    animation: bounce 8s infinite alternate;
+}
+.loader img:nth-child(2){
+    animation-delay: 2s;
+}
+.loader img:nth-child(3){
+    animation-delay: 4s;   
+}
+.loader img:nth-child(4){
+    animation-delay: 6s;  
+}
+@keyframes bounce{
+    to{
+        width: 150px;
+        height: 150px;
+        transform: translate3d(0, -50px,0);
+
+    }
+}
+
+
+@keyframes example {
+    from {background-color: red;}
+    to {background-color: yellow;}
+  }
+  
+
+  div {
+    width: 300px;
+    height: 500px;
+    background-color: red;
+    animation-name: example;
+    animation-duration: 10s;
+    
+  }
+    
+ 
+    body {
+        font-family: Arial, sans-serif;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        margin: 0;
+        background-color: #f0f0f0;
+    }
+    
+    .transform-box {
+        width: 200px;
+        height: 200px;
+        background-color: #3498db;
+        color: white;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 20px;
+        border-radius: 10px;
+        transition: transform 0.5s ease, box-shadow 0.3s ease;
+        animation: bounce 2s infinite; 
+    }
+    
+    
+    @keyframes bounce {
+        0% {
+            transform: scale(1) rotate(0deg);
+        }
+        50% {
+            transform: scale(1.1) rotate(10deg);
+        }
+        100% {
+            transform: scale(1) rotate(0deg);
+        }
+    }
+    
+    .transform-box:hover {
+        transform: scale(1.2) rotate(15deg); 
+        box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2); 
+    }
+    
+    */
+    body {
+        font-family: Arial, sans-serif;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        margin: 0;
+        background-color: #f0f0f0;
+    }
+
+   
+    #animatedDiv {
+        width: 200px;
+        height: 200px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: blue;
+        color: white;
+        font-size: 20px;
+        text-align: center;
+        border-radius: 10px;
+        animation: moveAndColorChange 5s infinite; 
+    }
+
+    
+    @keyframes moveAndColorChange {
+        0% {
+            transform: translate(0, 0);
+            background-color: blue;
+        }
+        25% {
+            transform: translate(100px, 0);
+            background-color: red;
+        }
+        50% {
+            transform: translate(100px, 100px);
+            background-color: green;
+        }
+        75% {
+            transform: translate(0, 100px);
+            background-color: purple;
+        }
+        100% {
+            transform: translate(0, 0);
+            background-color: blue;
+        }
+    }
